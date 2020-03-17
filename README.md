@@ -12,3 +12,12 @@ docker run --rm \
     -it nitros12/container-per-ip \
     luhack-script-lab -p 10000-10500 -p 6969
 ```
+
+## Attempting it yourself
+
+1. Start it up:
+```
+docker run --rm -it -p 10000-10500 -p 6969 nitros12/luhack-script-lab
+```
+
+2. Poke `localhost:6969`
