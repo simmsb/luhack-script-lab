@@ -17,7 +17,7 @@ docker run --rm \
 
 1. Start it up:
 ```
-docker run --rm -it -p 10000-10500 -p 6969 nitros12/luhack-script-lab
+docker run --rm -it -p 10000-10500:10000-10500 -p 6969:6969 nitros12/luhack-script-lab
 ```
 
 2. Poke `localhost:6969`
