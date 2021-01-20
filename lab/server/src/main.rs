@@ -44,7 +44,7 @@ async fn main() {
         let mut port = main_port;
         let mut next_port = rng.sample(range);
 
-        for _ in 0..1000 {
+        for _ in 0..100 {
             info!("inner loop: {}", port);
             let msg = format!("The next port is: {}", next_port);
             match serve_port(port, &msg, first).await {
