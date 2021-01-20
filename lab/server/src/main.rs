@@ -32,13 +32,16 @@ async fn main() {
         .start()
         .unwrap();
 
+    let main_port: u16 = std::env::var("MAIN_PORT").ok().and_then(|s| s.parse().ok()).unwrap_or(6969);
+    let base_port: u16 = std::env::var("BASE_PORT").ok().and_then(|s| s.parse().ok()).unwrap_or(10_000);
+
     let mut rng = rand::thread_rng();
-    let range = rand::distributions::Uniform::new(10000, 10500);
+    let range = rand::distributions::Uniform::new(base_port, base_port + 500);
 
     'outer: loop {
         info!("outer loop");
         let mut first = true;
-        let mut port = 6969;
+        let mut port = main_port;
         let mut next_port = rng.sample(range);
 
         for _ in 0..1000 {
