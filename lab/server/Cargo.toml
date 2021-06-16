@@ -14,4 +14,4 @@ path = "src/main.rs"
 tokio = { version = "0.2.22", features = ["rt-core", "rt-threaded", "io-driver", "io-util", "net", "tcp", "time", "macros", "sync"] }
 log = "0.4.11"
 flexi_logger = "0.15.9"
-rand = "0.7.3"
+rand = "0.8.4"
